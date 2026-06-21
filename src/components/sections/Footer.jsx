@@ -7,11 +7,11 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="mt-4 overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-r from-void-900 via-fuchsia-950/30 to-void-900 px-6 py-10 text-center shadow-neon-lg backdrop-blur-xl sm:px-10"
+      className="mt-4 overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-r from-void-900 via-pink-950/35 to-void-900 px-6 py-10 text-center shadow-neon-lg backdrop-blur-xl sm:px-10"
     >
       <div className="mx-auto flex max-w-lg flex-col items-center gap-3">
         <Heart
-          className="h-8 w-8 text-fuchsia-400 drop-shadow-[0_0_12px_rgba(232,121,249,0.6)]"
+          className="h-8 w-8 text-pink-400 drop-shadow-[0_0_14px_rgba(244,114,182,0.55)]"
           fill="currentColor"
           strokeWidth={1.25}
           aria-hidden

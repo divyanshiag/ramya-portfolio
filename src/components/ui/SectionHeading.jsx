@@ -8,7 +8,7 @@ export function SectionHeading({ eyebrow, title, subtitle, align = 'center' }) {
     <div className={`mb-10 sm:mb-12 ${alignClass}`}>
       {eyebrow ? (
         <Reveal>
-          <p className="mb-2 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400/90">
+          <p className="mb-2 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-pink-400/95">
             {eyebrow}
           </p>
         </Reveal>

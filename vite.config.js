@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Relative base so JS/CSS/images resolve on GitHub Pages (/repo/) and root domains alike.
-// (A fixed '/repo-name/' base breaks if the site URL or deploy layout does not match.)
+// Must match the GitHub Pages path: https://<user>.github.io/ramya-portfolio/
+// so JS/CSS load when you open /ramya-portfolio/ locally or on Pages.
+// For a custom domain at the site root, change this to '/' and redeploy.
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/ramya-portfolio/',
 })

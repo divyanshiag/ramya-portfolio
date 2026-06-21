@@ -18,7 +18,7 @@ export function FloatingDecor() {
         {diamonds.map((d, i) => (
           <div
             key={i}
-            className="absolute rotate-45 rounded-sm bg-gradient-to-br from-cyan-400/15 to-fuchsia-500/10"
+            className="absolute rotate-45 rounded-sm bg-gradient-to-br from-pink-300/20 to-rose-500/12"
             style={{
               top: d.top,
               left: d.left,
@@ -37,7 +37,7 @@ export function FloatingDecor() {
       {diamonds.map((d, i) => (
         <motion.div
           key={i}
-          className="absolute rotate-45 rounded-sm bg-gradient-to-br from-cyan-400/25 to-fuchsia-500/15 shadow-neon-sm"
+          className="absolute rotate-45 rounded-sm bg-gradient-to-br from-pink-300/30 to-rose-600/18 shadow-neon-sm"
           style={{
             top: d.top,
             left: d.left,
@@ -58,8 +58,8 @@ export function FloatingDecor() {
           }}
         />
       ))}
-      <div className="absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-fuchsia-600/15 blur-[100px] animate-glow-pulse" />
-      <div className="absolute -right-16 bottom-1/4 h-80 w-80 rounded-full bg-cyan-500/12 blur-[100px] animate-glow-pulse" />
+      <div className="absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-pink-600/18 blur-[100px] animate-glow-pulse" />
+      <div className="absolute -right-16 bottom-1/4 h-80 w-80 rounded-full bg-rose-500/14 blur-[100px] animate-glow-pulse" />
     </div>
   )
 }

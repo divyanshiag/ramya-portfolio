@@ -3,7 +3,7 @@ import { siteContent } from '../../data/siteContent'
 import { SectionHeading } from '../ui/SectionHeading'
 import { Reveal } from '../ui/Reveal'
 import { SoftCard } from '../ui/SoftCard'
-import { publicUrl } from '../../utils/publicUrl'
+import { PortraitFrame } from '../ui/PortraitFrame'
 
 export function About() {
   const reduce = useReducedMotion()
@@ -23,19 +23,17 @@ export function About() {
             transition={{ type: 'spring', stiffness: 260, damping: 22 }}
             className="relative w-full max-w-md"
           >
-            <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-fuchsia-600/30 to-cyan-500/20 blur-xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-fuchsia-500/35 bg-zinc-900/40 shadow-neon-lg ring-1 ring-cyan-400/15">
-              <img
-                src={publicUrl(aboutPortrait.src)}
-                alt={aboutPortrait.alt}
-                width={800}
-                height={1000}
-                className="aspect-[4/5] w-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void-950/50 to-transparent" />
-            </div>
+            <PortraitFrame
+              variant="about"
+              path={aboutPortrait.src}
+              alt={aboutPortrait.alt}
+              width={800}
+              height={1000}
+              loading="lazy"
+              showOuterHalo
+              driftPhase={1}
+              overlayClass="bg-gradient-to-t from-void-950/50 via-transparent to-transparent"
+            />
           </motion.div>
         </Reveal>
         <div className="space-y-6">

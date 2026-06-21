@@ -21,14 +21,14 @@ export function ParentMessage() {
         transition={{ duration: reduce ? 0 : 0.65, ease: [0.22, 1, 0.36, 1] }}
       >
         <SoftCard variant="default" className="relative overflow-hidden px-6 py-10 sm:px-12 sm:py-14">
-          <div className="pointer-events-none absolute -right-8 top-0 font-display text-[8rem] leading-none text-fuchsia-500/[0.12] sm:text-[10rem]">
+          <div className="pointer-events-none absolute -right-8 top-0 font-display text-[8rem] leading-none text-pink-500/[0.14] sm:text-[10rem]">
             &ldquo;
           </div>
           <blockquote className="relative mx-auto max-w-3xl text-center">
             <p className="font-display text-xl italic leading-relaxed text-zinc-200 sm:text-2xl lg:text-[1.65rem] lg:leading-relaxed">
               {parentMessage.quote}
             </p>
-            <footer className="mt-8 font-sans text-sm font-semibold tracking-wide text-fuchsia-300/90 sm:text-base">
+            <footer className="mt-8 font-sans text-sm font-semibold tracking-wide text-pink-300/95 sm:text-base">
               {parentMessage.attribution}
             </footer>
           </blockquote>

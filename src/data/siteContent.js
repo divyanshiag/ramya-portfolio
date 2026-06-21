@@ -31,12 +31,12 @@ export const siteContent = {
   birthDate: '2025-08-19',
   birthTime: '3:15 PM',
   heroImage: {
-    src: 'photos/ramya-hero.png',
-    alt: 'Ramya Jain in a soft blue knit sweater, sweet close-up portrait',
+    src: 'photos/ramya-lace-bow.png',
+    alt: 'Ramya in a white lace outfit with a soft pink bow and headband',
   },
   aboutPortrait: {
-    src: 'photos/ramya-formal.png',
-    alt: 'Professional portrait of Ramya Jain in an elegant black dress with rose detail',
+    src: 'photos/ramya-hero.png',
+    alt: 'Ramya in a soft blue knit sweater, sweet close-up',
   },
   aboutParagraphs: [
     'Ramya Jain was born on 19 August 2025 at 3:15 PM and changed everything in the gentlest, happiest way. Her parents, Porush Jain and Divyanshi Agarwal, are soaking up every coo, stretch, and sleepy smile.',
@@ -97,6 +97,30 @@ export const siteContent = {
       alt: 'Ramya in a cream cardigan and beanie sitting on granite steps',
       caption: 'Little fashion moment',
     },
+    {
+      id: 'g5',
+      src: 'photos/ramya-festival.png',
+      alt: 'Ramya in denim with festive garland and colorful backdrop',
+      caption: 'Festival day fun',
+    },
+    {
+      id: 'g6',
+      src: 'photos/ramya-with-dad.png',
+      alt: 'Ramya smiling in peach floral outfit with dad at a café',
+      caption: 'Smiles with Dad',
+    },
+    {
+      id: 'g7',
+      src: 'photos/ramya-formal.png',
+      alt: 'Professional portrait of Ramya in an elegant black dress',
+      caption: 'Tiny black dress moment',
+    },
+    {
+      id: 'g8',
+      src: 'photos/ramya-closeup-pink.png',
+      alt: 'Close-up portrait of Ramya on a soft pink blanket',
+      caption: 'Pink blanket close-up',
+    },
   ],
   loves: [
     { id: 'l1', label: 'Bubble baths', icon: 'Bath' },
@@ -107,12 +131,11 @@ export const siteContent = {
     { id: 'l6', label: 'Tickles', icon: 'HandHeart' },
   ],
   growthStats: [
-    { id: 'gr1', label: 'Weight', value: '15 lb', hint: 'example — update after checkups' },
-    { id: 'gr2', label: 'Height', value: '25 in', hint: 'example — update after checkups' },
-    { id: 'gr3', label: 'Head', value: '16.5 in', hint: 'for fun tracking' },
+    { id: 'gr1', label: 'Born into', value: 'Golden August' },
+    { id: 'gr2', label: 'Measured in', value: 'Smiles, not inches' },
   ],
   growthDisclaimer:
-    'Numbers are placeholders you can refresh after visits — not medical advice, just our scrapbook notes for 2025.',
+    'Some things are too lovely to put on a chart — here we mark time in light, laughter, and the quiet miracle of watching her unfold.',
   parentMessage: {
     quote:
       'Ramya, we hope you always feel how loved you are — by us, by your family, and by this big, beautiful world you joined in August 2025. Keep shining, little one.',

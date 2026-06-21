@@ -19,7 +19,7 @@ export function SiteNav() {
           <a
             key={link.href}
             href={link.href}
-            className="shrink-0 rounded-full px-3 py-2 font-sans text-xs font-semibold text-zinc-400 transition hover:bg-cyan-500/10 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 sm:text-sm"
+            className="shrink-0 rounded-full px-3 py-2 font-sans text-xs font-semibold text-zinc-400 transition hover:bg-pink-500/15 hover:text-pink-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400 sm:text-sm"
           >
             {link.label}
           </a>

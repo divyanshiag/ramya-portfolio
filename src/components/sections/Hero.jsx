@@ -1,8 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { siteContent } from '../../data/siteContent'
 import { Reveal } from '../ui/Reveal'
+import { PortraitFrame } from '../ui/PortraitFrame'
 import { daysOldFromISO } from '../../utils/age'
-import { publicUrl } from '../../utils/publicUrl'
 
 const makeContainer = (reduce) => ({
   hidden: {},
@@ -39,8 +39,8 @@ export function Hero() {
       id="hero"
       className="glass-panel relative mb-16 scroll-mt-28 overflow-hidden px-5 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20"
     >
-      <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-fuchsia-600/20 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-cyan-500/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-pink-600/22 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-rose-600/16 blur-3xl" />
 
       <div className="relative grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <motion.div
@@ -50,15 +50,15 @@ export function Hero() {
           className="order-2 text-center lg:order-1 lg:text-left"
         >
           <motion.div variants={makeItem(reduce)} className="mb-4 flex justify-center lg:justify-start">
-            <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-300 shadow-neon-sm sm:text-xs">
+            <span className="inline-flex items-center gap-2 rounded-full border border-pink-500/35 bg-pink-500/10 px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-pink-300 shadow-neon-sm sm:text-xs">
               <span
                 className="relative flex h-2 w-2"
                 aria-hidden
               >
                 {!reduce ? (
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-pink-400 opacity-60" />
                 ) : null}
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-pink-400" />
               </span>
               Little legend online
             </span>
@@ -77,10 +77,12 @@ export function Hero() {
           </motion.h1>
 
           <motion.div variants={makeItem(reduce)} className="mx-auto mt-6 max-w-md lg:mx-0">
-            <div className="mb-1 flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-zinc-500 sm:text-xs">
+            <p className="mb-1 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-wider text-zinc-500 sm:text-xs">
               <span>Growing strong</span>
-              <span className="text-cyan-400/90">{Math.min(100, Math.round((days / 365) * 100))}% year one</span>
-            </div>
+              <span className="text-pink-400/95">
+                {Math.min(100, Math.round((days / 365) * 100))}% · year one
+              </span>
+            </p>
             <div className="progress-neon-track">
               <motion.div
                 className="progress-neon-fill animate-progress-shimmer"
@@ -102,12 +104,12 @@ export function Hero() {
             className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/60 px-4 py-2 text-sm font-medium text-zinc-200 shadow-neon-sm backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-fuchsia-500 shadow-[0_0_8px_#e879f9]" aria-hidden />
+              <span className="h-2 w-2 rounded-full bg-pink-500 shadow-[0_0_10px_rgba(236,72,153,0.65)]" aria-hidden />
               Born {bornWithTime}
             </span>
             <a
               href="#about"
-              className="btn-neon inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-bold text-white transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400"
+              className="btn-neon inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-bold text-white transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400"
             >
               Peek inside
             </a>
@@ -130,21 +132,19 @@ export function Hero() {
                 : { duration: 5.5, repeat: Infinity, ease: 'easeInOut' }
             }
           >
-            <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-fuchsia-600/30 via-transparent to-cyan-500/25 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-fuchsia-500/40 bg-zinc-900/50 shadow-neon-lg ring-2 ring-cyan-400/20">
-              <img
-                src={publicUrl(heroImage.src)}
-                alt={heroImage.alt}
-                width={720}
-                height={880}
-                className="aspect-[4/5] w-full object-cover"
-                loading="eager"
-                decoding="async"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void-950/80 via-transparent to-cyan-500/10" />
-
+            <PortraitFrame
+              variant="hero"
+              path={heroImage.src}
+              alt={heroImage.alt}
+              width={720}
+              height={880}
+              loading="eager"
+              showOuterHalo
+              driftPhase={0}
+              overlayClass="bg-gradient-to-t from-void-950/80 via-transparent to-pink-500/10"
+            >
               <motion.div
-                className="absolute left-3 top-3 rounded-lg border border-white/15 bg-zinc-950/70 px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-wide text-cyan-300 shadow-neon-sm backdrop-blur-md sm:left-4 sm:top-4 sm:px-3 sm:text-xs"
+                className="absolute left-3 top-3 rounded-lg border border-white/15 bg-zinc-950/70 px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-wide text-pink-300 shadow-neon-sm backdrop-blur-md sm:left-4 sm:top-4 sm:px-3 sm:text-xs"
                 initial={{ opacity: 0, x: -8 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8, duration: 0.45 }}
@@ -152,14 +152,14 @@ export function Hero() {
                 Days {days}+
               </motion.div>
               <motion.div
-                className="absolute bottom-3 right-3 rounded-lg border border-white/15 bg-zinc-950/70 px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-wide text-fuchsia-300 shadow-neon-sm backdrop-blur-md sm:bottom-4 sm:right-4 sm:px-3 sm:text-xs"
+                className="absolute bottom-3 right-3 rounded-lg border border-white/15 bg-zinc-950/70 px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-wide text-rose-300 shadow-neon-sm backdrop-blur-md sm:bottom-4 sm:right-4 sm:px-3 sm:text-xs"
                 initial={{ opacity: 0, x: 8 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1, duration: 0.45 }}
               >
                 Love XP max
               </motion.div>
-            </div>
+            </PortraitFrame>
           </motion.div>
         </Reveal>
       </div>

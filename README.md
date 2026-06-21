@@ -1,16 +1,28 @@
-# React + Vite
+# Ramya portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Single-page React (Vite + Tailwind v4) site for GitHub Pages.
 
-Currently, two official plugins are available:
+## Local dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The app is built for the repo path **`/ramya-portfolio/`** (same as `https://<user>.github.io/ramya-portfolio/`).
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Open the URL Vite prints — it should end with **`/ramya-portfolio/`**.  
+If you open only `http://localhost:5173/`, assets will not load correctly.
 
-## Expanding the ESLint configuration
+## Build & deploy
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+npm run deploy
+```
+
+`npm run deploy` runs `gh-pages` with the `dist` output. GitHub Pages should use the **`gh-pages`** branch (or your chosen source) with the site at the project URL above.
+
+## Custom domain at the site root
+
+If you later host this at the **root** of a domain (not under `/ramya-portfolio/`), change `base` in `vite.config.js` to `'/'` and redeploy.

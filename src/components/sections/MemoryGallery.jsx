@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { siteContent } from '../../data/siteContent'
 import { SectionHeading } from '../ui/SectionHeading'
-import { publicUrl } from '../../utils/publicUrl'
+import { PortraitFrame } from '../ui/PortraitFrame'
 
 export function MemoryGallery() {
   const reduce = useReducedMotion()
@@ -24,7 +24,7 @@ export function MemoryGallery() {
           show: { transition: { staggerChildren: reduce ? 0 : 0.08 } },
         }}
       >
-        {gallery.map((g) => (
+        {gallery.map((g, i) => (
           <motion.figure
             key={g.id}
             variants={{
@@ -36,23 +36,19 @@ export function MemoryGallery() {
                 transition: { duration: reduce ? 0 : 0.45, ease: [0.22, 1, 0.36, 1] },
               },
             }}
-            className="group overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40 shadow-neon-sm ring-1 ring-fuchsia-500/10 transition hover:border-cyan-400/35 hover:shadow-neon-md"
+            className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40 shadow-neon-sm ring-1 ring-pink-500/15 transition hover:border-pink-400/45 hover:shadow-neon-md"
           >
-            <motion.div
-              whileHover={reduce ? undefined : { scale: 1.04 }}
-              transition={{ type: 'spring', stiffness: 280, damping: 22 }}
-              className="overflow-hidden"
-            >
-              <img
-                src={publicUrl(g.src)}
-                alt={g.alt}
-                width={600}
-                height={750}
-                className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:brightness-110"
-                loading="lazy"
-                decoding="async"
-              />
-            </motion.div>
+            <PortraitFrame
+              variant="gallery"
+              path={g.src}
+              alt={g.alt}
+              width={600}
+              height={750}
+              loading="lazy"
+              driftPhase={i}
+              hoverScale
+              overlayClass="bg-gradient-to-t from-void-950/40 via-transparent to-transparent"
+            />
             <figcaption className="border-t border-white/10 bg-void-900/90 px-3 py-2.5 text-center font-sans text-xs font-medium text-zinc-300 sm:text-sm">
               {g.caption}
             </figcaption>

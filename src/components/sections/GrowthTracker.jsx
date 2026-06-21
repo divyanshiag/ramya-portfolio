@@ -14,15 +14,15 @@ export function GrowthTracker() {
     ...growthStats,
     {
       id: 'computed-days',
-      label: 'Days on earth',
+      label: 'Days in this world',
       value: String(days),
-      hint: 'since birth date in your content file',
+      hint: 'From her first hello to today',
     },
     {
       id: 'computed-age',
-      label: 'About',
+      label: 'Her little era',
       value: ageLabel,
-      hint: 'approximate, for fun',
+      hint: 'A gentle estimate of time so far',
     },
   ]
 
@@ -31,7 +31,7 @@ export function GrowthTracker() {
       <SectionHeading
         eyebrow="Growing fast"
         title="Growth tracker"
-        subtitle="Keepsake stats — update after checkups to match your little one."
+        subtitle="A soft ledger of time — heart first, numbers only where they sparkle."
       />
       <p className="mx-auto mb-8 max-w-2xl text-center font-sans text-sm leading-relaxed text-zinc-500 sm:text-base">
         {growthDisclaimer}
@@ -61,7 +61,7 @@ export function GrowthTracker() {
               }}
             >
               <SoftCard variant={i % 3 === 0 ? 'pink' : i % 3 === 1 ? 'blue' : 'cream'}>
-                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-cyan-400/80">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-pink-400/90">
                   {s.label}
                 </p>
                 <p className="mt-2 font-display text-3xl font-bold text-gradient-neon sm:text-4xl">
@@ -84,9 +84,9 @@ export function GrowthTracker() {
           )
         })}
       </motion.div>
-      <p className="mt-6 text-center font-sans text-xs text-zinc-500">
-        Celebrating <span className="font-semibold text-cyan-400">{babyName}</span> — every inch
-        of growth is pure magic.
+      <p className="mt-6 text-center font-sans text-sm italic leading-relaxed text-zinc-400 sm:text-base">
+        Celebrating <span className="font-semibold not-italic text-pink-400">{babyName}</span> —{' '}
+        each sunrise another page in a story we never tire of reading.
       </p>
     </section>
   )

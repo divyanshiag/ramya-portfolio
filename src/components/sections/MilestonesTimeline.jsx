@@ -17,7 +17,7 @@ export function MilestonesTimeline() {
       />
       <div className="relative mx-auto max-w-2xl pl-2 sm:pl-4">
         <div
-          className="absolute left-[21px] top-2 bottom-2 w-px bg-gradient-to-b from-cyan-400 via-fuchsia-500 to-violet-600 opacity-70 sm:left-[25px]"
+          className="absolute left-[21px] top-2 bottom-2 w-px bg-gradient-to-b from-pink-400 via-rose-500 to-pink-700 opacity-75 sm:left-[25px]"
           aria-hidden
         />
         <motion.ul
@@ -45,11 +45,11 @@ export function MilestonesTimeline() {
               }}
               className="relative flex gap-5 pl-10 sm:gap-6 sm:pl-12"
             >
-              <div className="absolute left-0 top-5 flex h-10 w-10 items-center justify-center rounded-full border-2 border-fuchsia-500/50 bg-gradient-to-br from-zinc-900 to-zinc-800 shadow-neon-md sm:left-1 sm:top-6 sm:h-11 sm:w-11">
-                <LucideByName name={m.icon} className="h-4 w-4 text-cyan-400 sm:h-5 sm:w-5" strokeWidth={2} />
+              <div className="absolute left-0 top-5 flex h-10 w-10 items-center justify-center rounded-full border-2 border-pink-500/55 bg-gradient-to-br from-zinc-900 to-zinc-800 shadow-neon-md sm:left-1 sm:top-6 sm:h-11 sm:w-11">
+                <LucideByName name={m.icon} className="h-4 w-4 text-pink-400 sm:h-5 sm:w-5" strokeWidth={2} />
               </div>
               <SoftCard variant={index % 2 === 0 ? 'pink' : 'blue'} className="min-w-0 flex-1">
-                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-fuchsia-300/90">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-pink-300/95">
                   {m.date}
                 </p>
                 <h3 className="mt-1 font-display text-xl font-bold text-white">{m.title}</h3>
