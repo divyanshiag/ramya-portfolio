@@ -31,11 +31,11 @@ export const siteContent = {
   birthDate: '2025-08-19',
   birthTime: '3:15 PM',
   heroImage: {
-    src: '${import.meta.env.BASE_URL}photos/ramya-hero.png',
+    src: 'photos/ramya-hero.png',
     alt: 'Ramya Jain in a soft blue knit sweater, sweet close-up portrait',
   },
   aboutPortrait: {
-    src: '${import.meta.env.BASE_URL}photos/ramya-formal.png',
+    src: 'photos/ramya-formal.png',
     alt: 'Professional portrait of Ramya Jain in an elegant black dress with rose detail',
   },
   aboutParagraphs: [
@@ -75,25 +75,25 @@ export const siteContent = {
   gallery: [
     {
       id: 'g1',
-      src: '${import.meta.env.BASE_URL}photos/ramya-playground.png',
+      src: 'photos/ramya-playground.png',
       alt: 'Ramya sitting on a small chair in a bright play space with colorful foam blocks',
       caption: 'Playground sparkle',
     },
     {
       id: 'g2',
-      src: '${import.meta.env.BASE_URL}photos/ramya-one-month.png',
+      src: 'photos/ramya-one-month.png',
       alt: 'Ramya in a pink fuzzy outfit celebrating one month on a navy blanket',
       caption: 'One month milestone',
     },
     {
       id: 'g3',
-      src: '${import.meta.env.BASE_URL}photos/ramya-cake.png',
+      src: 'photos/ramya-cake.png',
       alt: 'Welcome cake for Ramya with name and date 19 August 2025',
       caption: 'Sweet welcome, 19 Aug 2025',
     },
     {
       id: 'g4',
-      src: '${import.meta.env.BASE_URL}photos/ramya-stairs.png',
+      src: 'photos/ramya-stairs.png',
       alt: 'Ramya in a cream cardigan and beanie sitting on granite steps',
       caption: 'Little fashion moment',
     },
