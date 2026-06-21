@@ -4,7 +4,8 @@
 /** @typedef {{ id: string; label: string; value: string; hint?: string }} GrowthStat */
 
 /**
- * Photos live in `public/photos/` (served as `/photos/...`). Edit filenames here if you replace files.
+ * Photos live in `public/photos/`. Use paths **without** a leading slash (e.g. `photos/x.png`);
+ * components resolve them with `publicUrl()` so GitHub Pages `base` works.
  * @type {{
  *   babyName: string
  *   babyFullName: string

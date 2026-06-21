@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { siteContent } from '../../data/siteContent'
 import { SectionHeading } from '../ui/SectionHeading'
+import { publicUrl } from '../../utils/publicUrl'
 
 export function MemoryGallery() {
   const reduce = useReducedMotion()
@@ -43,7 +44,7 @@ export function MemoryGallery() {
               className="overflow-hidden"
             >
               <img
-                src={g.src}
+                src={publicUrl(g.src)}
                 alt={g.alt}
                 width={600}
                 height={750}

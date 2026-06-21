@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { siteContent } from '../../data/siteContent'
 import { Reveal } from '../ui/Reveal'
 import { daysOldFromISO } from '../../utils/age'
+import { publicUrl } from '../../utils/publicUrl'
 
 const makeContainer = (reduce) => ({
   hidden: {},
@@ -132,7 +133,7 @@ export function Hero() {
             <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-fuchsia-600/30 via-transparent to-cyan-500/25 blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-fuchsia-500/40 bg-zinc-900/50 shadow-neon-lg ring-2 ring-cyan-400/20">
               <img
-                src={heroImage.src}
+                src={publicUrl(heroImage.src)}
                 alt={heroImage.alt}
                 width={720}
                 height={880}

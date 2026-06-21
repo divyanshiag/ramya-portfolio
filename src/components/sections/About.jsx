@@ -3,6 +3,7 @@ import { siteContent } from '../../data/siteContent'
 import { SectionHeading } from '../ui/SectionHeading'
 import { Reveal } from '../ui/Reveal'
 import { SoftCard } from '../ui/SoftCard'
+import { publicUrl } from '../../utils/publicUrl'
 
 export function About() {
   const reduce = useReducedMotion()
@@ -25,7 +26,7 @@ export function About() {
             <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-fuchsia-600/30 to-cyan-500/20 blur-xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-fuchsia-500/35 bg-zinc-900/40 shadow-neon-lg ring-1 ring-cyan-400/15">
               <img
-                src={aboutPortrait.src}
+                src={publicUrl(aboutPortrait.src)}
                 alt={aboutPortrait.alt}
                 width={800}
                 height={1000}
